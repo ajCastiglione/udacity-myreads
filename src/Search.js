@@ -15,6 +15,14 @@ class Search extends Component {
     newBooks: [],
     searchErr: false
   }
+  
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.query === this.state.query) {
+      return false;
+    }
+    return true;
+  }
+
 
   getBooks = (event) => {
 

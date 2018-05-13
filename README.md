@@ -1,9 +1,27 @@
 # MyReads Project
 
 This project uses the starter code and explaination from Udacity. This project saves a collection of books that you're reading, want to read, and have read. The search functionality pulls from udacity's api that servers some predefined books.
-
 -
 Below is the explanation of how everything is working behind the scenes.
+
+## Installation 
+
+<ol>
+<li>Run the command - npm install</li>
+<li>To run the app, use npm start or npm run</li>
+</ol>
+
+## Available Scripts
+In the project directory, you can run:
+
+<strong>npm start</strong>
+Runs the app in the development mode.
+
+<strong>npm test</strong>
+Launches the test runner in the interactive watch mode.
+
+<strong>npm run build</strong>
+Builds the app for production to the build folder.
 
 ## Backend Server
 
