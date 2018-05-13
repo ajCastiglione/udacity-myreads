@@ -13,7 +13,6 @@ class BooksApp extends React.Component {
     // get books on load
     BooksAPI.getAll().then((books) => {
       this.setState({books})
-      console.log(books);
     })
   }
 
@@ -22,7 +21,7 @@ class BooksApp extends React.Component {
       // set shelf for new or updated book
       newBook.shelf = newShelf
       // Fetch new list, without updated or new book
-      var updatedBooks = this.state.books.filter( book => book.id !== newBook.id )
+      let updatedBooks = this.state.books.filter( book => book.id !== newBook.id )
       // add book to the array and set the state
       updatedBooks.push(newBook);
       this.setState({ books: updatedBooks })

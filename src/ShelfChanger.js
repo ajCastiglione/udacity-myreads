@@ -16,17 +16,18 @@ class ShelfChanger extends Component {
 
     // if book is in current list, set current shelf to book.shelf
     for (let single_book of books ) {
+      
       if (single_book.id === book.id)  {
         currentShelf = single_book.shelf
         break
-      }
+      } 
     }
 
     return (
       <div className="book-shelf-changer">
         <select  onChange={(event) => changeShelf(book, event.target.value)}
           defaultValue={ currentShelf }>
-          <option value="none" disabled>Move me...?</option>
+          <option value="move_me" disabled>Move me...?</option>
           <option value="currentlyReading">Currently Reading</option>
           <option value="wantToRead">Want to Read</option>
           <option value="read">Read</option>

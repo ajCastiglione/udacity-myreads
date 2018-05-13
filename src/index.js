@@ -8,3 +8,5 @@ ReactDOM.render(
   <BrowserRouter><App /></BrowserRouter>,
   document.getElementById('root')
 );
+
+/* I forget the name of the repo I referenced for file structure but it was very helpful. The layout was very similar with file structure and elegantly done. */

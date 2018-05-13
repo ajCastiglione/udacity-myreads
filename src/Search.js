@@ -21,13 +21,13 @@ class Search extends Component {
     const query = event.target.value;
     this.setState({ query: query })
 
-    // If theres input, search the db
+    // If theres input, search the api
     if (query) {
       BooksAPI.search(query, 20).then((books) => {
         books.length > 0 ?  this.setState({newBooks: books, searchErr: false }) : this.setState({ newBooks: [], searchErr: true })
       })
     // if query is empty => reset state to default
-  } else this.setState({newBooks: [], searchErr: false })
+    } else this.setState({newBooks: [], searchErr: false })
   }
 
   render() {
@@ -47,7 +47,7 @@ class Search extends Component {
             </div>
           </div>
           <div className="search-books-results">
-            { newBooks.length > 0 && (
+            { newBooks.length > 0 ? 
               <div>
                 <div className='inner-results'>
                   <h3>Search returned { newBooks.length } books </h3>
@@ -63,7 +63,9 @@ class Search extends Component {
                   ))}
                 </ol>
               </div>
-            )}
+              :
+              null
+            }
             { searchErr  && (
               <div>
                 <div className='no-results-err'>
